@@ -925,6 +925,107 @@ ul { list-style: none; }
 }
 
 /* ================================================
+   PRODUCT SECTION EXTRAS
+   ================================================ */
+.section-subhead {
+  text-align: center;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.95rem;
+  margin-top: -36px;
+  margin-bottom: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* "Source anything" strip below product grid */
+.source-anything {
+  background: rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 0;
+}
+.source-anything-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 28px 24px;
+  flex-wrap: wrap;
+}
+.source-anything-inner p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.source-anything-inner strong { color: var(--white); }
+
+/* ================================================
+   SERVICES — CATEGORY GRID
+   ================================================ */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.cat-card {
+  background: var(--white);
+  border: 1.5px solid var(--mid-grey);
+  border-radius: 3px;
+  padding: 32px 28px;
+  transition: var(--transition);
+}
+.cat-card:hover {
+  border-color: var(--gold-dark);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.cat-card svg {
+  width: 40px; height: 40px;
+  stroke: var(--gold-dark);
+  fill: none;
+  stroke-width: 1.5;
+  margin-bottom: 16px;
+  display: block;
+}
+.cat-card h3 {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.cat-card p {
+  font-size: 0.86rem;
+  color: var(--text-grey);
+  line-height: 1.75;
+}
+.cat-card--cta {
+  background: var(--black);
+  border-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cat-card--cta:hover {
+  border-color: var(--gold-dark);
+}
+.cat-card--cta svg { stroke: var(--gold-light); }
+.cat-card--cta h3 { color: var(--white); }
+.cat-card--cta p  { color: rgba(255,255,255,0.6); }
+
+@media (max-width: 1024px) {
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .cat-grid { grid-template-columns: 1fr; }
+  .source-anything-inner { flex-direction: column; text-align: center; }
+  .source-anything-inner .btn { width: 100%; text-align: center; }
+}
+
+/* ================================================
    FADE-IN ANIMATION
    ================================================ */
 .fade-in {
