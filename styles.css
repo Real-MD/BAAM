@@ -1056,20 +1056,18 @@ ul { list-style: none; }
 
   /* Header */
   .hamburger { display: flex; }
-  .site-header { overflow: visible; }
+  .site-header { z-index: 1000; }
   .main-nav {
-    position: absolute;
-    top: 100%; left: 0; right: 0;
+    position: fixed;
+    top: var(--header-h); left: 0; right: 0;
     background: var(--black);
     padding: 8px 0 24px;
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     transition: opacity 0.25s ease, transform 0.25s ease;
     box-shadow: 0 12px 30px rgba(0,0,0,0.5);
-    z-index: 999;
-    max-height: calc(100vh - var(--header-h));
-    overflow-y: auto;
+    z-index: 998;
   }
   .main-nav.open {
     opacity: 1;

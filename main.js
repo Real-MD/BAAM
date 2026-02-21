@@ -19,28 +19,28 @@
   const hamburger = document.getElementById('hamburger');
   const mainNav   = document.getElementById('mainNav');
   if (hamburger && mainNav) {
+    const closeNav = () => {
+      mainNav.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+
     hamburger.addEventListener('click', () => {
       const isOpen = mainNav.classList.toggle('open');
       hamburger.classList.toggle('open', isOpen);
       hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
     // Close on link click
     mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', closeNav);
     });
 
     // Close on outside click
     document.addEventListener('click', (e) => {
-      if (!header.contains(e.target)) {
-        mainNav.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
+      if (!header.contains(e.target)) closeNav();
     });
   }
 
