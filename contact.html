@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact BAAM Materials Ltd. Speak to Martin for fast quotes on construction materials delivered direct to your site.">
+  <title>Contact Us | BAAM Materials Ltd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================================================
+       HEADER
+       ================================================ -->
+  <header class="site-header scrolled" id="siteHeader">
+    <div class="container header-inner">
+
+      <div class="logo">
+        <a href="index.html" aria-label="BAAM Materials Ltd — Home">
+          <span class="logo-main">BAAM</span>
+          <span class="logo-sub">Materials Ltd</span>
+        </a>
+      </div>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Products &amp; Services</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ================================================
+       PAGE HERO
+       ================================================ -->
+  <div class="page-hero" data-bg-text="CONTACT">
+    <div class="container">
+      <h1>Get in Touch</h1>
+      <p>We'll get back to you with a quote as quickly as possible</p>
+    </div>
+  </div>
+
+  <!-- ================================================
+       CONTACT SECTION
+       ================================================ -->
+  <section class="contact-section section-pad">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info fade-in">
+          <h2>Contact Martin</h2>
+
+          <div class="contact-detail">
+            <div class="detail-label">Phone</div>
+            <div class="detail-value">
+              <a href="tel:07734311652">07734 311 652</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="detail-label">How to Order</div>
+            <div class="detail-value" style="font-size:0.95rem; font-weight:400; color:var(--text-grey); line-height:1.75;">
+              Call or use the form opposite with your materials list. Martin will come back to you with a competitive price quickly.
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="detail-label">Response Time</div>
+            <div class="detail-value" style="font-size:0.95rem; font-weight:400; color:var(--text-grey);">
+              Same day on most enquiries
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="detail-label">Supply Area</div>
+            <div class="detail-value" style="font-size:0.95rem; font-weight:400; color:var(--text-grey);">
+              Contact us to confirm delivery to your location
+            </div>
+          </div>
+
+          <div class="contact-note">
+            <strong>We operate on a proforma basis.</strong> No credit accounts needed &mdash; cleared funds on confirmation, then your materials are dispatched direct to site. Fast, simple, no fuss.
+          </div>
+
+          <!-- Quick links to products -->
+          <div style="margin-top:36px;">
+            <p style="font-family:var(--font-heading);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold-dark);margin-bottom:14px;">Our Products</p>
+            <ul style="list-style:none;padding:0;">
+              <li style="padding:6px 0;border-bottom:1px solid var(--mid-grey);font-size:0.88rem;">
+                <a href="services.html" style="color:var(--text-dark);transition:color 0.2s;" onmouseover="this.style.color='#D4A017'" onmouseout="this.style.color='var(--text-dark)'">Aggregates &amp; Bulk Bags &rarr;</a>
+              </li>
+              <li style="padding:6px 0;border-bottom:1px solid var(--mid-grey);font-size:0.88rem;">
+                <a href="services.html" style="color:var(--text-dark);transition:color 0.2s;" onmouseover="this.style.color='#D4A017'" onmouseout="this.style.color='var(--text-dark)'">Cement &amp; Binders &rarr;</a>
+              </li>
+              <li style="padding:6px 0;border-bottom:1px solid var(--mid-grey);font-size:0.88rem;">
+                <a href="services.html" style="color:var(--text-dark);transition:color 0.2s;" onmouseover="this.style.color='#D4A017'" onmouseout="this.style.color='var(--text-dark)'">Structural Timber &rarr;</a>
+              </li>
+              <li style="padding:6px 0;font-size:0.88rem;">
+                <a href="services.html" style="color:var(--text-dark);transition:color 0.2s;" onmouseover="this.style.color='#D4A017'" onmouseout="this.style.color='var(--text-dark)'">Sheet Materials &rarr;</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap fade-in">
+          <h2>Send a Message</h2>
+
+          <!--
+            To make this form send real emails, sign up at formspree.io,
+            create a form, and replace the action attribute:
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            Then remove the e.preventDefault() in main.js.
+          -->
+          <form id="contactForm" action="#" method="POST" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" required autocomplete="given-name">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required autocomplete="family-name">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="07700 000 000" autocomplete="tel">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">What do you need?</label>
+              <select id="subject" name="subject">
+                <option value="" disabled selected>Select a category</option>
+                <option value="aggregates">Aggregates &amp; Bulk Bags</option>
+                <option value="cement">Cement &amp; Binders</option>
+                <option value="timber">Structural Timber</option>
+                <option value="sheet">Sheet Materials</option>
+                <option value="mixed">Mixed order / multiple materials</option>
+                <option value="other">Other enquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message / Materials List <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" placeholder="Tell us what you need, quantities, and your site location..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+
+          </form>
+
+          <div class="form-success" id="formSuccess" role="alert">
+            &#10003; &nbsp; Message sent — Martin will be in touch shortly.
+          </div>
+
+          <p style="margin-top:20px;font-size:0.8rem;color:var(--text-grey);">
+            Prefer to call? Reach Martin directly on <a href="tel:07734311652" style="color:var(--gold-dark);font-weight:600;">07734 311 652</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CTA BANNER
+       ================================================ -->
+  <section class="cta-banner fade-in">
+    <div class="container cta-inner">
+      <h2>Ready to Order?</h2>
+      <p>Get top-quality materials at great prices. Contact Martin to discuss your requirements.</p>
+      <div class="cta-actions">
+        <a href="tel:07734311652" class="btn btn-dark">Call Now</a>
+        <a href="tel:07734311652" class="cta-phone">07734 311 652</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-col">
+        <div class="footer-logo">
+          <span class="logo-main">BAAM</span>
+          <span class="logo-sub">Materials Ltd</span>
+        </div>
+        <p class="footer-tagline">Quality Materials. Reliable Supply.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Products &amp; Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Contact Martin</p>
+        <a href="tel:07734311652" class="footer-phone">07734 311 652</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-small">"Quality Materials. Reliable Supply."</p>
+        <p class="footer-small">Direct-to-site construction materials supplier serving builders and contractors across the region.</p>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 BAAM Materials Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
