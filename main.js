@@ -94,9 +94,6 @@
   const formSuccess = document.getElementById('formSuccess');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-      // If using Formspree, remove the preventDefault below
-      // and set action="https://formspree.io/f/YOUR_ID" on the form
-      e.preventDefault();
 
       const submitBtn = contactForm.querySelector('.btn-submit');
       submitBtn.textContent = 'Sending...';
