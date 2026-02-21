@@ -69,7 +69,7 @@ ul { list-style: none; }
 }
 
 /* Logo */
-.logo a { display: flex; flex-direction: column; line-height: 1; }
+.logo a { display: flex; flex-direction: column; align-items: center; line-height: 1; }
 .logo-main {
   font-family: var(--font-heading);
   font-size: 2rem;
@@ -93,6 +93,7 @@ ul { list-style: none; }
   color: var(--gold-light);
   letter-spacing: 5px;
   text-transform: uppercase;
+  text-align: center;
   margin-top: 4px;
 }
 
