@@ -196,7 +196,7 @@ img { max-width: 100%; display: block; }
 .ae-btn-outline { border: 2px solid rgba(255,255,255,0.35); color: var(--ae-white); }
 .ae-btn-outline:hover { border-color: var(--ae-white); background: rgba(255,255,255,0.08); }
 
-.ae-hero-icon { opacity: 0.75; flex-shrink: 0; }
+.ae-hero-icon { opacity: 1; flex-shrink: 0; }
 .ae-hero-icon img { width: 380px; height: auto; background: var(--ae-white); padding: 16px 24px; border-radius: 4px; }
 
 /* ================================================
