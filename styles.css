@@ -531,6 +531,7 @@ ul { list-style: none; }
 .footer-email:hover { opacity: 0.75; }
 .footer-small { font-size: 0.82rem !important; color: rgba(255,255,255,0.35) !important; line-height: 1.75; }
 .footer-bottom { padding: 20px 0; text-align: center; }
+.footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 6px; }
 .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
 
 /* ================================================
