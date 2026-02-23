@@ -197,7 +197,7 @@ img { max-width: 100%; display: block; }
 .ae-btn-outline:hover { border-color: var(--ae-white); background: rgba(255,255,255,0.08); }
 
 .ae-hero-icon { opacity: 0.75; flex-shrink: 0; }
-.ae-hero-icon img { width: 380px; height: auto; border-radius: 4px; }
+.ae-hero-icon img { width: 380px; height: auto; background: var(--ae-white); padding: 16px 24px; border-radius: 4px; }
 
 /* ================================================
    SECTION HEADINGS
