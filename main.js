@@ -5,16 +5,6 @@
 (function () {
   'use strict';
 
-  /* ---------- Group Bar Height ---------- */
-  const groupBar = document.querySelector('.group-bar');
-  if (groupBar) {
-    const syncGroupBarHeight = () => {
-      document.documentElement.style.setProperty('--group-bar-h', groupBar.offsetHeight + 'px');
-    };
-    syncGroupBarHeight();
-    window.addEventListener('resize', syncGroupBarHeight, { passive: true });
-  }
-
   /* ---------- Scroll Header ---------- */
   const header = document.getElementById('siteHeader');
   if (header) {

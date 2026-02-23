@@ -22,14 +22,10 @@
   --shadow:       0 4px 20px rgba(0,0,0,0.1);
   --shadow-dark:  0 8px 30px rgba(0,0,0,0.3);
   --header-h:     75px;
-  --group-bar-h:  37px;
 }
 
 /* ---------- Group Bar ---------- */
 .group-bar {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1002;
   background: #1a1a1a;
   padding: 9px 0;
   text-align: center;
@@ -48,9 +44,8 @@
 
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + var(--group-bar-h)); }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 body {
-  padding-top: var(--group-bar-h);
   font-family: var(--font-body);
   color: var(--text-dark);
   background: var(--white);
@@ -74,8 +69,8 @@ ul { list-style: none; }
    HEADER
    ================================================ */
 .site-header {
-  position: fixed;
-  top: var(--group-bar-h); left: 0; right: 0;
+  position: sticky;
+  top: 0; left: 0; right: 0;
   z-index: 1000;
   background: transparent;
   transition: background 0.4s ease, box-shadow 0.4s ease;
@@ -247,11 +242,10 @@ ul { list-style: none; }
    HERO (HOME)
    ================================================ */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--header-h));
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: var(--black);
-  padding-top: var(--header-h);
 }
 .hero-content {
   display: flex;
@@ -574,7 +568,7 @@ ul { list-style: none; }
    ================================================ */
 .page-hero {
   background: var(--black);
-  padding: 150px 0 90px;
+  padding: 80px 0 90px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1057,7 +1051,7 @@ ul { list-style: none; }
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: var(--black);
-    padding-top: calc(var(--group-bar-h) + var(--header-h) + 16px);
+    padding-top: calc(var(--header-h) + 16px);
     padding-left: 0; padding-right: 0; padding-bottom: 40px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
