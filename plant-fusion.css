@@ -196,11 +196,13 @@ img { max-width: 100%; display: block; }
 .pf-hero-logo { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .pf-hero-logo img { width: 360px; height: auto; }
 .pf-hero-phone {
+  display: block;
   font-family: var(--pf-font-h);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 800;
-  color: var(--pf-white);
+  color: #FFFFFF;
   letter-spacing: 2px;
+  text-align: center;
   transition: color 0.2s;
 }
 .pf-hero-phone:hover { color: var(--pf-orange); }
