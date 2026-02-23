@@ -72,8 +72,8 @@ ul { list-style: none; }
   position: sticky;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: transparent;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  background: var(--black);
+  transition: box-shadow 0.4s ease;
 }
 .site-header.scrolled {
   background: var(--black);
@@ -149,6 +149,16 @@ ul { list-style: none; }
 }
 .main-nav a.nav-amber::after { display: none; }
 .main-nav a.nav-amber:hover { background: #cc2828; color: var(--white); }
+.main-nav a.nav-plant {
+  background: #F97316;
+  color: var(--white);
+  padding: 8px 18px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+.main-nav a.nav-plant::after { display: none; }
+.main-nav a.nav-plant:hover { background: #D96010; color: var(--white); }
 
 /* Hamburger */
 .hamburger {
