@@ -638,6 +638,15 @@ ul { list-style: none; }
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.cat-badge .from-price {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 900;
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 .cat-details h2 {
   font-family: var(--font-heading);
