@@ -121,6 +121,16 @@ ul { list-style: none; }
 .main-nav a.active::after { width: 100%; }
 .main-nav a:hover,
 .main-nav a.active { color: var(--gold-light); }
+.main-nav a.nav-amber {
+  background: #EE3535;
+  color: var(--white);
+  padding: 8px 18px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+.main-nav a.nav-amber::after { display: none; }
+.main-nav a.nav-amber:hover { background: #cc2828; color: var(--white); }
 
 /* Hamburger */
 .hamburger {
