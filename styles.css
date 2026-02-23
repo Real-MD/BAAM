@@ -532,6 +532,8 @@ ul { list-style: none; }
 .footer-small { font-size: 0.82rem !important; color: rgba(255,255,255,0.35) !important; line-height: 1.75; }
 .footer-bottom { padding: 20px 0; text-align: center; }
 .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 6px; }
+.footer-legal a { color: rgba(255,255,255,0.3); text-decoration: underline; transition: color 0.2s; }
+.footer-legal a:hover { color: rgba(255,255,255,0.6); }
 .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
 
 /* ================================================
