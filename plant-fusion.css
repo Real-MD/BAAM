@@ -179,9 +179,6 @@ img { max-width: 100%; display: block; }
 .pf-hero-logo img {
   width: 360px;
   height: auto;
-  background: var(--pf-white);
-  padding: 20px 28px;
-  border-radius: 4px;
 }
 
 /* ================================================
