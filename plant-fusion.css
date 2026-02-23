@@ -91,6 +91,17 @@ img { max-width: 100%; display: block; }
 }
 .pf-nav .pf-nav-baam:hover { background: #b8880f !important; }
 
+.pf-header-phone {
+  font-family: var(--pf-font-h);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--pf-white);
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+.pf-header-phone:hover { color: var(--pf-orange); }
+
 .pf-hamburger {
   display: none;
   flex-direction: column;
@@ -415,6 +426,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) {
   .pf-nav          { display: none; }
   .pf-hamburger    { display: flex; }
+  .pf-header-phone { display: none; }
   .pf-nav.open {
     display: flex;
     flex-direction: column;

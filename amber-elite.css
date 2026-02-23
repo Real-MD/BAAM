@@ -112,6 +112,17 @@ img { max-width: 100%; display: block; }
 }
 .ae-nav .ae-nav-baam:hover { background: #b8880f !important; }
 
+.ae-header-phone {
+  font-family: var(--ae-font-h);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ae-white);
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+.ae-header-phone:hover { color: var(--ae-red); }
+
 .ae-hamburger {
   display: none;
   flex-direction: column;
@@ -498,8 +509,9 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 1100px) {
-  .ae-nav         { display: none; }
-  .ae-hamburger   { display: flex; }
+  .ae-nav          { display: none; }
+  .ae-hamburger    { display: flex; }
+  .ae-header-phone { display: none; }
   .ae-nav.open {
     display: flex;
     flex-direction: column;
