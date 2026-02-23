@@ -519,6 +519,16 @@ ul { list-style: none; }
   transition: opacity 0.2s;
 }
 .footer-phone:hover { opacity: 0.75; }
+.footer-email {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--gold-light);
+  display: block;
+  margin-top: 6px;
+  transition: opacity 0.2s;
+  word-break: break-all;
+}
+.footer-email:hover { opacity: 0.75; }
 .footer-small { font-size: 0.82rem !important; color: rgba(255,255,255,0.35) !important; line-height: 1.75; }
 .footer-bottom { padding: 20px 0; text-align: center; }
 .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
