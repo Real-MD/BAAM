@@ -72,6 +72,22 @@ img { max-width: 100%; display: block; }
   transition: background 0.2s !important;
 }
 .pf-nav .pf-nav-cta:hover { background: var(--pf-orange-dark) !important; }
+.pf-nav .pf-nav-amber {
+  background: #EE3535;
+  color: var(--pf-white) !important;
+  padding: 10px 24px;
+  border-radius: 2px;
+  transition: background 0.2s !important;
+}
+.pf-nav .pf-nav-amber:hover { background: #cc2828 !important; }
+.pf-nav .pf-nav-baam {
+  background: #D4A017;
+  color: var(--pf-white) !important;
+  padding: 10px 24px;
+  border-radius: 2px;
+  transition: background 0.2s !important;
+}
+.pf-nav .pf-nav-baam:hover { background: #b8880f !important; }
 
 .pf-hamburger {
   display: none;
