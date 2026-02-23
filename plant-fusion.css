@@ -91,17 +91,6 @@ img { max-width: 100%; display: block; }
 }
 .pf-nav .pf-nav-baam:hover { background: #b8880f !important; }
 
-.pf-header-phone {
-  font-family: var(--pf-font-h);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--pf-white);
-  letter-spacing: 1px;
-  white-space: nowrap;
-  transition: color 0.2s;
-}
-.pf-header-phone:hover { color: var(--pf-orange); }
-
 .pf-hamburger {
   display: none;
   flex-direction: column;
@@ -204,11 +193,17 @@ img { max-width: 100%; display: block; }
 .pf-btn-outline { border: 2px solid rgba(255,255,255,0.3); color: var(--pf-white); }
 .pf-btn-outline:hover { border-color: var(--pf-white); background: rgba(255,255,255,0.08); }
 
-.pf-hero-logo { flex-shrink: 0; }
-.pf-hero-logo img {
-  width: 360px;
-  height: auto;
+.pf-hero-logo { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.pf-hero-logo img { width: 360px; height: auto; }
+.pf-hero-phone {
+  font-family: var(--pf-font-h);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--pf-white);
+  letter-spacing: 2px;
+  transition: color 0.2s;
 }
+.pf-hero-phone:hover { color: var(--pf-orange); }
 
 /* ================================================
    SECTION HEADINGS
@@ -426,7 +421,6 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) {
   .pf-nav          { display: none; }
   .pf-hamburger    { display: flex; }
-  .pf-header-phone { display: none; }
   .pf-nav.open {
     display: flex;
     flex-direction: column;

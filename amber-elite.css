@@ -112,17 +112,6 @@ img { max-width: 100%; display: block; }
 }
 .ae-nav .ae-nav-baam:hover { background: #b8880f !important; }
 
-.ae-header-phone {
-  font-family: var(--ae-font-h);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--ae-white);
-  letter-spacing: 1px;
-  white-space: nowrap;
-  transition: color 0.2s;
-}
-.ae-header-phone:hover { color: var(--ae-red); }
-
 .ae-hamburger {
   display: none;
   flex-direction: column;
@@ -225,8 +214,17 @@ img { max-width: 100%; display: block; }
 .ae-btn-outline { border: 2px solid rgba(255,255,255,0.35); color: var(--ae-white); }
 .ae-btn-outline:hover { border-color: var(--ae-white); background: rgba(255,255,255,0.08); }
 
-.ae-hero-icon { opacity: 1; flex-shrink: 0; }
+.ae-hero-icon { opacity: 1; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .ae-hero-icon img { width: 380px; height: auto; background: var(--ae-white); padding: 16px 24px; border-radius: 4px; }
+.ae-hero-phone {
+  font-family: var(--ae-font-h);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ae-white);
+  letter-spacing: 2px;
+  transition: color 0.2s;
+}
+.ae-hero-phone:hover { color: var(--ae-red); }
 
 /* ================================================
    SECTION HEADINGS
@@ -511,7 +509,6 @@ img { max-width: 100%; display: block; }
 @media (max-width: 1100px) {
   .ae-nav          { display: none; }
   .ae-hamburger    { display: flex; }
-  .ae-header-phone { display: none; }
   .ae-nav.open {
     display: flex;
     flex-direction: column;
