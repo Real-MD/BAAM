@@ -72,7 +72,7 @@ img { max-width: 100%; display: block; }
 .ae-nav ul {
   list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 18px;
   align-items: center;
 }
 .ae-nav a {
@@ -96,16 +96,18 @@ img { max-width: 100%; display: block; }
 .ae-nav .ae-nav-plant {
   background: #F97316;
   color: var(--ae-white) !important;
-  padding: 10px 24px;
+  padding: 8px 16px;
   border-radius: 2px;
+  letter-spacing: 1px;
   transition: background 0.2s !important;
 }
 .ae-nav .ae-nav-plant:hover { background: #D96010 !important; }
 .ae-nav .ae-nav-baam {
   background: #D4A017;
   color: var(--ae-white) !important;
-  padding: 10px 24px;
+  padding: 8px 16px;
   border-radius: 2px;
+  letter-spacing: 1px;
   transition: background 0.2s !important;
 }
 .ae-nav .ae-nav-baam:hover { background: #b8880f !important; }
