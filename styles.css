@@ -143,7 +143,6 @@ ul { list-style: none; }
 .main-nav a:hover,
 .main-nav a.active { color: var(--gold-light); }
 .main-nav a.nav-amber {
-  background: #EE3535;
   color: var(--white);
   padding: 0 18px;
   border-radius: 0;
@@ -153,9 +152,8 @@ ul { list-style: none; }
   align-items: center;
 }
 .main-nav a.nav-amber::after { display: none; }
-.main-nav a.nav-amber:hover { background: #cc2828; color: var(--white); }
+.main-nav a.nav-amber:hover { background: #EE3535; color: var(--white); }
 .main-nav a.nav-plant {
-  background: #F97316;
   color: var(--white);
   padding: 0 18px;
   border-radius: 0;
@@ -165,7 +163,7 @@ ul { list-style: none; }
   align-items: center;
 }
 .main-nav a.nav-plant::after { display: none; }
-.main-nav a.nav-plant:hover { background: #D96010; color: var(--white); }
+.main-nav a.nav-plant:hover { background: #F97316; color: var(--white); }
 
 /* Hamburger */
 .hamburger {
@@ -1090,6 +1088,18 @@ ul { list-style: none; }
     letter-spacing: 2px;
   }
   .main-nav ul li a::after { display: none; }
+  .main-nav ul li a.nav-amber {
+    display: block;
+    padding: 18px 28px;
+    background: #EE3535;
+    letter-spacing: 2px;
+  }
+  .main-nav ul li a.nav-plant {
+    display: block;
+    padding: 18px 28px;
+    background: #F97316;
+    letter-spacing: 2px;
+  }
 
   /* Hero */
   .hero { grid-template-columns: 1fr; min-height: auto; }
