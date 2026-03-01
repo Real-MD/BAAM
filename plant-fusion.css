@@ -67,8 +67,21 @@ img { max-width: 100%; display: block; }
   letter-spacing: 1.5px;
   color: rgba(255,255,255,0.65);
   transition: color 0.2s;
+  position: relative;
 }
+.pf-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; left: 0;
+  width: 0; height: 2px;
+  background: var(--pf-orange);
+  transition: width 0.3s ease;
+}
+.pf-nav a:hover::after { width: 100%; }
 .pf-nav a:hover { color: var(--pf-white); }
+.pf-nav .pf-nav-cta::after,
+.pf-nav .pf-nav-amber::after,
+.pf-nav .pf-nav-baam::after { display: none; }
 .pf-nav .pf-nav-cta {
   color: rgba(255,255,255,0.65) !important;
 }
