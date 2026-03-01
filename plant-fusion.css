@@ -70,13 +70,9 @@ img { max-width: 100%; display: block; }
 }
 .pf-nav a:hover { color: var(--pf-white); }
 .pf-nav .pf-nav-cta {
-  background: var(--pf-orange);
-  color: var(--pf-white) !important;
-  padding: 10px 24px;
-  border-radius: 2px;
-  transition: background 0.2s !important;
+  color: rgba(255,255,255,0.65) !important;
 }
-.pf-nav .pf-nav-cta:hover { background: var(--pf-orange-dark) !important; }
+.pf-nav .pf-nav-cta:hover { color: var(--pf-white) !important; }
 .pf-nav .pf-nav-amber {
   color: var(--pf-white) !important;
   padding: 0 18px;

@@ -91,13 +91,9 @@ img { max-width: 100%; display: block; }
 }
 .ae-nav a:hover { color: var(--ae-white); }
 .ae-nav .ae-nav-cta {
-  background: var(--ae-red);
-  color: var(--ae-white) !important;
-  padding: 10px 24px;
-  border-radius: 2px;
-  transition: background 0.2s !important;
+  color: rgba(255,255,255,0.75) !important;
 }
-.ae-nav .ae-nav-cta:hover { background: var(--ae-red-dark) !important; }
+.ae-nav .ae-nav-cta:hover { color: var(--ae-white) !important; }
 .ae-nav .ae-nav-plant {
   color: var(--ae-white) !important;
   padding: 0 18px;
