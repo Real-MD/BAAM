@@ -79,7 +79,6 @@ img { max-width: 100%; display: block; }
 }
 .pf-nav a:hover::after { width: 100%; }
 .pf-nav a:hover { color: var(--pf-white); }
-.pf-nav .pf-nav-cta::after,
 .pf-nav .pf-nav-amber::after,
 .pf-nav .pf-nav-baam::after { display: none; }
 .pf-nav .pf-nav-cta {
