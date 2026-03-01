@@ -429,11 +429,17 @@ img { max-width: 100%; display: block; }
     position: absolute;
     top: 100%; left: 0; right: 0;
     background: var(--pf-dark-mid);
-    padding: 20px 32px;
+    padding: 0;
     z-index: 200;
     box-shadow: 0 8px 24px rgba(0,0,0,0.4);
   }
-  .pf-nav.open ul  { flex-direction: column; gap: 16px; }
+  .pf-nav.open ul  { flex-direction: column; gap: 0; }
+  .pf-nav.open ul li a {
+    display: block;
+    padding: 16px 28px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0;
+  }
   .pf-about-points { grid-template-columns: 1fr; }
   .pf-fleet-grid   { grid-template-columns: 1fr; }
   .pf-why-grid     { grid-template-columns: 1fr; }
