@@ -33,6 +33,10 @@
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
+    // Close button inside overlay
+    const navClose = document.getElementById('navClose');
+    if (navClose) navClose.addEventListener('click', closeNav);
+
     // Close on link click
     mainNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', closeNav);

@@ -42,6 +42,7 @@
       </div>
 
       <nav class="ae-nav" id="aeNav" aria-label="Main navigation">
+        <button class="ae-nav-close" id="aeNavClose" aria-label="Close menu">&#x2715;</button>
         <ul>
           <li><a href="#who-we-are">Who We Are</a></li>
           <li><a href="#employers">For Employers</a></li>
@@ -280,12 +281,19 @@
   </footer>
 
   <script>
-    document.getElementById('aeHamburger').addEventListener('click', function() {
-      var nav = document.getElementById('aeNav');
+    var aeHamburger = document.getElementById('aeHamburger');
+    var aeNav = document.getElementById('aeNav');
+    function closeAeNav() {
+      aeNav.classList.remove('open');
+      aeHamburger.setAttribute('aria-expanded', 'false');
+    }
+    aeHamburger.addEventListener('click', function() {
       var expanded = this.getAttribute('aria-expanded') === 'true';
-      nav.classList.toggle('open');
+      aeNav.classList.toggle('open');
       this.setAttribute('aria-expanded', !expanded);
     });
+    document.getElementById('aeNavClose').addEventListener('click', closeAeNav);
+    aeNav.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeAeNav); });
   </script>
 
 </body>

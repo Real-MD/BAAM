@@ -35,6 +35,7 @@
       </div>
 
       <nav class="pf-nav" id="pfNav" aria-label="Main navigation">
+        <button class="pf-nav-close" id="pfNavClose" aria-label="Close menu">&#x2715;</button>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#fleet">Our Fleet</a></li>
@@ -271,12 +272,19 @@
   </footer>
 
   <script>
-    document.getElementById('pfHamburger').addEventListener('click', function() {
-      var nav = document.getElementById('pfNav');
+    var pfHamburger = document.getElementById('pfHamburger');
+    var pfNav = document.getElementById('pfNav');
+    function closePfNav() {
+      pfNav.classList.remove('open');
+      pfHamburger.setAttribute('aria-expanded', 'false');
+    }
+    pfHamburger.addEventListener('click', function() {
       var expanded = this.getAttribute('aria-expanded') === 'true';
-      nav.classList.toggle('open');
+      pfNav.classList.toggle('open');
       this.setAttribute('aria-expanded', !expanded);
     });
+    document.getElementById('pfNavClose').addEventListener('click', closePfNav);
+    pfNav.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closePfNav); });
   </script>
 
 </body>

@@ -98,6 +98,8 @@ img { max-width: 100%; display: block; }
 }
 .pf-nav .pf-nav-baam:hover { background: #D4A017 !important; }
 
+.pf-nav-close { display: none; }
+
 .pf-hamburger {
   display: none;
   flex-direction: column;
@@ -440,6 +442,19 @@ img { max-width: 100%; display: block; }
     z-index: 200;
     box-shadow: 0 8px 24px rgba(0,0,0,0.4);
   }
+  .pf-nav.open .pf-nav-close {
+    display: block;
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.55);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 4px 8px;
+    transition: color 0.2s;
+  }
+  .pf-nav.open .pf-nav-close:hover { color: var(--pf-white); }
   .pf-nav.open ul  { flex-direction: column; gap: 16px; }
   .pf-nav.open ul li:has(> .pf-nav-amber),
   .pf-nav.open ul li:has(> .pf-nav-baam) { display: block; margin: 0 -32px; }
