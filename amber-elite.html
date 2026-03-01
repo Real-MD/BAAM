@@ -280,12 +280,31 @@
   </footer>
 
   <script>
-    document.getElementById('aeHamburger').addEventListener('click', function() {
-      var nav = document.getElementById('aeNav');
-      var expanded = this.getAttribute('aria-expanded') === 'true';
-      nav.classList.toggle('open');
-      this.setAttribute('aria-expanded', !expanded);
-    });
+    (function () {
+      var hamburger = document.getElementById('aeHamburger');
+      var nav       = document.getElementById('aeNav');
+      var header    = document.getElementById('aeHeader');
+      if (hamburger && nav) {
+        var closeNav = function () {
+          nav.classList.remove('open');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        };
+        hamburger.addEventListener('click', function () {
+          var isOpen = nav.classList.toggle('open');
+          hamburger.classList.toggle('open', isOpen);
+          hamburger.setAttribute('aria-expanded', isOpen);
+          document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', closeNav);
+        });
+        document.addEventListener('click', function (e) {
+          if (header && !header.contains(e.target)) closeNav();
+        });
+      }
+    })();
   </script>
 
 </body>
