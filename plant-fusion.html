@@ -271,31 +271,12 @@
   </footer>
 
   <script>
-    (function () {
-      var hamburger = document.getElementById('pfHamburger');
-      var nav       = document.getElementById('pfNav');
-      var header    = document.getElementById('pfHeader');
-      if (hamburger && nav) {
-        var closeNav = function () {
-          nav.classList.remove('open');
-          hamburger.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
-        };
-        hamburger.addEventListener('click', function () {
-          var isOpen = nav.classList.toggle('open');
-          hamburger.classList.toggle('open', isOpen);
-          hamburger.setAttribute('aria-expanded', isOpen);
-          document.body.style.overflow = isOpen ? 'hidden' : '';
-        });
-        nav.querySelectorAll('a').forEach(function (link) {
-          link.addEventListener('click', closeNav);
-        });
-        document.addEventListener('click', function (e) {
-          if (header && !header.contains(e.target)) closeNav();
-        });
-      }
-    })();
+    document.getElementById('pfHamburger').addEventListener('click', function() {
+      var nav = document.getElementById('pfNav');
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      nav.classList.toggle('open');
+      this.setAttribute('aria-expanded', !expanded);
+    });
   </script>
 
 </body>
