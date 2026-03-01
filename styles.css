@@ -1066,6 +1066,7 @@ ul { list-style: none; }
   .hamburger { display: flex; }
   .site-header { z-index: 1000; }
   .main-nav {
+    display: block;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: var(--black);
@@ -1098,7 +1099,7 @@ ul { list-style: none; }
     z-index: 999;
   }
   .nav-close:hover { color: var(--white); }
-  .main-nav ul { flex-direction: column; gap: 0; }
+  .main-nav ul { flex-direction: column; gap: 0; align-items: stretch; height: auto; }
   .main-nav ul li a {
     display: block;
     padding: 18px 28px;
@@ -1114,12 +1115,14 @@ ul { list-style: none; }
     padding: 18px 28px;
     background: #EE3535;
     letter-spacing: 2px;
+    text-align: center;
   }
   .main-nav ul li a.nav-plant {
     display: block;
     padding: 18px 28px;
     background: #F97316;
     letter-spacing: 2px;
+    text-align: center;
   }
 
   /* Hero */
