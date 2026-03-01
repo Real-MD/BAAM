@@ -285,12 +285,16 @@
     var aeNav = document.getElementById('aeNav');
     function closeAeNav() {
       aeNav.classList.remove('open');
+      aeHamburger.classList.remove('open');
       aeHamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     }
     aeHamburger.addEventListener('click', function() {
-      var expanded = this.getAttribute('aria-expanded') === 'true';
-      aeNav.classList.toggle('open');
-      this.setAttribute('aria-expanded', !expanded);
+      var isOpen = this.getAttribute('aria-expanded') !== 'true';
+      aeNav.classList.toggle('open', isOpen);
+      this.classList.toggle('open', isOpen);
+      this.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
     document.getElementById('aeNavClose').addEventListener('click', closeAeNav);
     aeNav.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeAeNav); });

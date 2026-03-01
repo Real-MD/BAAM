@@ -276,12 +276,16 @@
     var pfNav = document.getElementById('pfNav');
     function closePfNav() {
       pfNav.classList.remove('open');
+      pfHamburger.classList.remove('open');
       pfHamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     }
     pfHamburger.addEventListener('click', function() {
-      var expanded = this.getAttribute('aria-expanded') === 'true';
-      pfNav.classList.toggle('open');
-      this.setAttribute('aria-expanded', !expanded);
+      var isOpen = this.getAttribute('aria-expanded') !== 'true';
+      pfNav.classList.toggle('open', isOpen);
+      this.classList.toggle('open', isOpen);
+      this.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
     document.getElementById('pfNavClose').addEventListener('click', closePfNav);
     pfNav.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closePfNav); });

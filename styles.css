@@ -1116,6 +1116,7 @@ ul { list-style: none; }
     background: #EE3535;
     letter-spacing: 2px;
     text-align: center;
+    justify-content: center;
   }
   .main-nav ul li a.nav-plant {
     display: block;
@@ -1123,6 +1124,7 @@ ul { list-style: none; }
     background: #F97316;
     letter-spacing: 2px;
     text-align: center;
+    justify-content: center;
   }
 
   /* Hero */
