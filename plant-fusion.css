@@ -442,7 +442,7 @@ img { max-width: 100%; display: block; }
   }
   .pf-nav.open ul  { flex-direction: column; gap: 16px; }
   .pf-nav.open ul li:has(> .pf-nav-amber),
-  .pf-nav.open ul li:has(> .pf-nav-baam) { margin: 0 -32px; }
+  .pf-nav.open ul li:has(> .pf-nav-baam) { display: block; margin: 0 -32px; }
   .pf-nav.open .pf-nav-amber,
   .pf-nav.open .pf-nav-baam {
     display: block;

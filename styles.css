@@ -1088,6 +1088,8 @@ ul { list-style: none; }
     letter-spacing: 2px;
   }
   .main-nav ul li a::after { display: none; }
+  .main-nav ul li:has(> a.nav-amber),
+  .main-nav ul li:has(> a.nav-plant) { display: block; }
   .main-nav ul li a.nav-amber {
     display: block;
     padding: 18px 28px;

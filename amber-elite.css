@@ -527,7 +527,7 @@ img { max-width: 100%; display: block; }
   }
   .ae-nav.open ul { flex-direction: column; gap: 16px; }
   .ae-nav.open ul li:has(> .ae-nav-plant),
-  .ae-nav.open ul li:has(> .ae-nav-baam) { margin: 0 -32px; }
+  .ae-nav.open ul li:has(> .ae-nav-baam) { display: block; margin: 0 -32px; }
   .ae-nav.open .ae-nav-plant,
   .ae-nav.open .ae-nav-baam {
     display: block;
