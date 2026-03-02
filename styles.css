@@ -338,9 +338,6 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(212, 160, 23, 0.08);
-  border: 1px solid rgba(212, 160, 23, 0.28);
-  padding: 28px 48px;
 }
 .hero-logo-main {
   font-family: var(--font-heading);
@@ -350,15 +347,23 @@ ul { list-style: none; }
   letter-spacing: 10px;
   text-transform: uppercase;
   line-height: 1;
+  display: inline-block;
+}
+.hero-logo-main::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--gold-grad);
+  margin-top: 5px;
 }
 .hero-logo-sub {
   font-family: var(--font-heading);
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--gold-light);
+  color: var(--white);
   letter-spacing: 6px;
   text-transform: uppercase;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 .hero-phone {
   font-family: var(--font-heading);
