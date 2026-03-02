@@ -1183,3 +1183,32 @@ ul { list-style: none; }
   .product-grid { grid-template-columns: 1fr; }
   .product-card { height: 240px; }
 }
+
+/* ================================================
+   WHATSAPP STICKY BUTTON
+   ================================================ */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6);
+}
+.whatsapp-btn svg {
+  width: 30px;
+  height: 30px;
+  fill: #ffffff;
+}
