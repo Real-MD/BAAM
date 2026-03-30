@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAAM Materials — Client Welcome Pack</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-dark: #0f1419;
+      --bg-card: #1a1f26;
+      --bg-card-alt: #222930;
+      --gold: #c9a84c;
+      --gold-light: #d4b965;
+      --green: #4caf50;
+      --white: #ffffff;
+      --gray-100: #f0f0f0;
+      --gray-200: #d0d0d0;
+      --gray-300: #a0a0a0;
+      --gray-400: #707070;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg-dark);
+      color: var(--gray-200);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Page structure ── */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 60px;
+      page-break-after: always;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .section-label::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--gold);
+      margin-top: 10px;
+    }
+
+    /* ── Headings ── */
+    h1, h2, h3, h4 {
+      color: var(--white);
+      line-height: 1.15;
+    }
+
+    .page-title {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .page-title .accent {
+      color: var(--gold);
+    }
+
+    .page-subtitle {
+      font-size: 1.1rem;
+      color: var(--gray-300);
+      margin-bottom: 48px;
+      max-width: 640px;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--bg-card);
+      border-radius: 8px;
+      padding: 32px 36px;
+      margin-bottom: 20px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--gray-200);
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .card .highlight {
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 12px;
+      font-style: italic;
+    }
+
+    .card .checkmark {
+      color: var(--green);
+      font-size: 0.9rem;
+      margin-top: 12px;
+      font-style: italic;
+    }
+
+    /* ── Three-column grid ── */
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .three-col .col {
+      background: var(--bg-card);
+      border-radius: 8px;
+      padding: 28px 24px;
+      border-top: 3px solid var(--gold);
+    }
+
+    .three-col .col h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .three-col .col p {
+      font-size: 0.9rem;
+      color: var(--gray-300);
+    }
+
+    .three-col .col .big-number {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
+
+    /* ── Guarantee box ── */
+    .guarantee {
+      background: var(--bg-card);
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+      padding: 28px 36px;
+      margin: 40px 0;
+    }
+
+    .guarantee .label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .guarantee p {
+      font-size: 0.95rem;
+      color: var(--gray-200);
+      line-height: 1.75;
+    }
+
+    /* ── Green callout ── */
+    .callout-green {
+      background: rgba(76, 175, 80, 0.1);
+      border-left: 4px solid var(--green);
+      border-radius: 8px;
+      padding: 24px 32px;
+      margin: 32px 0;
+    }
+
+    .callout-green p {
+      color: var(--gray-100);
+      font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    /* ── Gold callout ── */
+    .callout-gold {
+      background: rgba(201, 168, 76, 0.1);
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+      padding: 24px 32px;
+      margin: 32px 0;
+    }
+
+    .callout-gold p {
+      color: var(--gray-100);
+      font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    /* ── Numbered items ── */
+    .numbered-item {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .numbered-item .num {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--gold);
+      opacity: 0.4;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 56px;
+    }
+
+    .numbered-item .content h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .numbered-item .content p {
+      font-size: 0.95rem;
+      color: var(--gray-200);
+      line-height: 1.75;
+    }
+
+    /* ── Step items ── */
+    .step {
+      background: var(--bg-card);
+      border-radius: 8px;
+      padding: 28px 36px;
+      margin-bottom: 20px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .step .step-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .step h3 {
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      font-size: 0.95rem;
+      color: var(--gray-200);
+      line-height: 1.75;
+    }
+
+    /* ── Timeline ── */
+    .timeline-item {
+      padding-left: 24px;
+      border-left: 2px solid var(--gold);
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .timeline-item .time-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .timeline-item p {
+      font-size: 0.95rem;
+      color: var(--gray-200);
+      line-height: 1.75;
+    }
+
+    /* ── Bullet list ── */
+    .bullet-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .bullet-list li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      color: var(--gray-200);
+    }
+
+    .bullet-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    /* ── Services list ── */
+    .service-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 24px 0;
+    }
+
+    .service-item:last-child {
+      border-bottom: none;
+    }
+
+    .service-item h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .service-item p {
+      font-size: 0.95rem;
+      color: var(--gray-200);
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+
+    .service-item .checkmark {
+      color: var(--green);
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    /* ── Supply chain diagram ── */
+    .supply-chain {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 32px 0;
+      flex-wrap: wrap;
+    }
+
+    .supply-chain .node {
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+
+    .supply-chain .node.active {
+      background: var(--gold);
+      color: var(--bg-dark);
+    }
+
+    .supply-chain .node.removed {
+      background: transparent;
+      border: 1px solid var(--gray-400);
+      color: var(--gray-400);
+      text-decoration: line-through;
+    }
+
+    .supply-chain .arrow {
+      color: var(--gray-400);
+      font-size: 1.2rem;
+    }
+
+    .supply-chain-caption {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--gray-400);
+      font-style: italic;
+      margin-top: -16px;
+      margin-bottom: 32px;
+    }
+
+    /* ── CTA section ── */
+    .cta-box {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 48px 40px;
+      text-align: center;
+      margin-top: 48px;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+    }
+
+    .cta-box h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .cta-box .cta-subtitle {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gray-200);
+      margin-bottom: 8px;
+    }
+
+    .cta-box .cta-description {
+      font-size: 0.95rem;
+      color: var(--gray-300);
+      max-width: 520px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+    }
+
+    .cta-box .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 24px auto;
+    }
+
+    .cta-box .contact-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .cta-box .contact-details {
+      font-size: 0.95rem;
+      color: var(--gray-300);
+    }
+
+    /* ── Page footer ── */
+    .page-footer {
+      position: absolute;
+      bottom: 30px;
+      left: 60px;
+      right: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 16px;
+    }
+
+    .page-footer .brand {
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── Why BAAM big numbers ── */
+    .why-card {
+      background: var(--bg-card);
+      border-radius: 8px;
+      padding: 36px 40px;
+      margin-bottom: 24px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .why-card .why-num {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--gold);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .why-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .why-card p {
+      font-size: 0.95rem;
+      color: var(--gray-200);
+      line-height: 1.75;
+    }
+
+    /* ── Print styles ── */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: var(--bg-dark);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        padding: 48px 48px;
+        min-height: auto;
+        page-break-inside: avoid;
+      }
+
+      .page-footer {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════ PAGE 1 — COVER ════════════════════════════════════════ -->
+  <section class="page">
+    <div style="margin-bottom: 40px;">
+      <div style="font-size: 2.4rem; font-weight: 900; color: var(--gold); letter-spacing: 0.04em;">BAAM</div>
+      <div style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); opacity: 0.7;">Materials</div>
+    </div>
+
+    <p class="section-label" style="margin-bottom: 24px;">Client Welcome Pack</p>
+
+    <h1 class="page-title" style="font-size: 3.4rem; margin-bottom: 24px;">
+      YOUR OUTSOURCED<br>PROCUREMENT<br><span class="accent">DEPARTMENT.</span>
+    </h1>
+
+    <p style="font-size: 1.05rem; color: var(--gray-200); max-width: 520px; line-height: 1.8; margin-bottom: 56px; border-left: 3px solid var(--gold); padding-left: 20px;">
+      Structured, commercially disciplined materials buying for construction contractors — without employing a full-time buyer. We protect your margin, improve your supplier leverage, and build commercial control across your entire materials spend.
+    </p>
+
+    <div class="three-col" style="margin-bottom: 40px;">
+      <div class="col">
+        <h4>More in Your Pocket</h4>
+        <p>Recover money you are already owed.</p>
+      </div>
+      <div class="col">
+        <h4>Full Commercial Control</h4>
+        <p>Know exactly what you spend and why.</p>
+      </div>
+      <div class="col">
+        <h4>Your Accounts, Always</h4>
+        <p>We manage them. They stay in your name.</p>
+      </div>
+    </div>
+
+    <div class="guarantee">
+      <div class="label">ROI Guaranteed</div>
+      <p>If we do not find savings that exceed your monthly retainer within the first 90 days, you pay nothing for that period. We put that in writing — because we are that confident in what we find.</p>
+    </div>
+
+    <p style="font-size: 1.1rem; color: var(--gray-300); font-style: italic; margin-top: 32px;">Managed Procurement. Protected Margin.</p>
+
+    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06);">
+      <p style="font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px;">Book Your Free Procurement Health Check</p>
+      <p style="font-size: 1rem; font-weight: 600; color: var(--white);">Martin Cross — Director, BAAM Materials</p>
+      <p style="font-size: 0.95rem; color: var(--gray-300);">07513 448631 &nbsp;&middot;&nbsp; martin.cross@baammaterials.co.uk</p>
+    </div>
+
+    <div class="page-footer">
+      <span class="brand">BAAM Materials</span>
+      <span>Managed Procurement &middot; Protected Margin</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ PAGE 2 — WHAT YOU GAIN ════════════════════════════════════════ -->
+  <section class="page">
+    <p class="section-label">What You Gain</p>
+    <h1 class="page-title" style="margin-bottom: 8px;">
+      Here Is What Working With BAAM<br><span class="accent">Actually Looks Like for Your Business.</span>
+    </h1>
+    <p class="page-subtitle">&nbsp;</p>
+
+    <div class="card">
+      <h3>More Money in Your Business Every Month</h3>
+      <p>Contractors working with BAAM consistently recover more from their materials spend than the cost of the engagement. Rebates start arriving. Invoice errors get credited. Better pricing takes effect on every order. The impact is visible from month one — and it compounds every month after that.</p>
+    </div>
+
+    <div class="card">
+      <h3>Professional Buying Power Without the Headcount</h3>
+      <p>A full-time procurement manager costs £45,000 to £65,000 in salary alone before employer NI, pension and management time. BAAM gives you the same structured commercial oversight and a dedicated buying team — without adding a single person to your payroll, your pension contributions, or your management responsibilities.</p>
+    </div>
+
+    <div class="card">
+      <h3>Your Supplier Accounts Stay in Your Name. Always.</h3>
+      <p>BAAM manages your procurement — it does not take it over. Every supplier account remains in your business name at all times. You maintain full visibility and full control. BAAM simply applies 18 years of merchant-side expertise to manage those relationships more effectively on your behalf.</p>
+    </div>
+
+    <div class="card">
+      <h3>Complete Transparency on Every Penny</h3>
+      <p>Every month you receive a clear, itemised report showing exactly what was found, what was improved, and what your business has saved. No vague claims. No unquantified benefits. A specific, documented number that tells you precisely what BAAM has delivered — every single month.</p>
+    </div>
+
+    <div class="card">
+      <h3>Materials When You Need Them — Never a Programme Risk</h3>
+      <p>Procurement is aligned with your build programme so materials arrive when your site demands them. No last-minute orders at inflated prices. No delays caused by poorly timed purchasing. No emergency sourcing. Just materials, in the right quantity, at the right time, at the best available price.</p>
+    </div>
+
+    <div class="card">
+      <h3>One Point of Contact. Zero Procurement Administration.</h3>
+      <p>BAAM handles supplier negotiations, invoice queries, rebate chasing, account management and procurement scheduling — so your team does not have to. You spend your time running projects. We spend ours making sure your materials spend works as hard as possible for your business.</p>
+    </div>
+
+    <div class="page-footer">
+      <span class="brand">BAAM Materials</span>
+      <span>Managed Procurement &middot; Protected Margin</span>
+      <span>2</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ PAGE 3 — THE PROBLEM ════════════════════════════════════════ -->
+  <section class="page">
+    <p class="section-label">The Problem</p>
+    <h1 class="page-title" style="margin-bottom: 8px;">Where Your Margin Is Going Right Now.</h1>
+    <p class="page-subtitle">Without a dedicated procurement function, margin leaves your business quietly every single month. Here is exactly where it goes — and how much it costs.</p>
+
+    <div class="card">
+      <h3>01 &nbsp; Rebates You Are Owed But Never Receiving</h3>
+      <p>Merchants set up rebate agreements knowing most contractors never track them properly. They expire unclaimed. They get underclaimed. On £1 million of annual spend, an unclaimed 4% rebate is £40,000 leaving your business every year — silently, without a single invoice showing it.</p>
+      <p class="highlight">£40,000 per year lost on £1m spend alone</p>
+    </div>
+
+    <div class="card">
+      <h3>02 &nbsp; Discount Tiers You Are Not Being Placed On</h3>
+      <p>Builders merchants operate multiple discount levels and do not volunteer to move you up them. Without someone who knows where those thresholds sit and how to negotiate them, you are almost certainly overpaying on every single transaction, every single week.</p>
+      <p class="highlight">Overpaying on every order placed</p>
+    </div>
+
+    <div class="card">
+      <h3>03 &nbsp; Invoice Errors That Go Unchallenged</h3>
+      <p>Wrong pricing applied. Agreed discounts not showing. Duplicate charges. Merchants know almost nobody checks line by line — and they rely on it. These errors are far more common than contractors expect, and they compound fast.</p>
+      <p class="highlight">Errors found in the majority of audits we conduct</p>
+    </div>
+
+    <div class="card">
+      <h3>04 &nbsp; Supply Chain Costs You Do Not Need to Be Paying</h3>
+      <p>Most merchants add margin at every layer between you and the manufacturer. Without the knowledge or relationships to buy closer to source, you are funding mark-ups that a commercially structured buyer simply would not pay.</p>
+      <p class="highlight">Multiple margin layers added to every product purchased</p>
+    </div>
+
+    <div class="callout-gold">
+      <p>Every one of these problems is fixable — and BAAM makes fixing them straightforward, low-effort and immediate. You do not need to change your suppliers. You do not need to hire anyone. You simply need BAAM working on your behalf.</p>
+    </div>
+
+    <div class="page-footer">
+      <span class="brand">BAAM Materials</span>
+      <span>Managed Procurement &middot; Protected Margin</span>
+      <span>3</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ PAGE 4 — ABOUT BAAM ════════════════════════════════════════ -->
+  <section class="page">
+    <p class="section-label">About BAAM</p>
+    <h1 class="page-title" style="margin-bottom: 8px;">
+      18 Years Inside the Merchant.<br><span class="accent">Now Working Entirely for You.</span>
+    </h1>
+    <p class="page-subtitle">&nbsp;</p>
+
+    <div class="card" style="margin-bottom: 32px;">
+      <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">Martin Cross — Director, BAAM Materials</p>
+      <h3 style="font-size: 1.3rem; margin-bottom: 16px;">The Knowledge No Competitor Has.</h3>
+      <p>Martin spent 18 years working inside builders merchants, progressing from the ground up to Branch Manager level — building a branch from zero to £5 million in annual revenue within a single year. In that time he developed a complete understanding of how merchants price, where their real margin sits, how far account managers can genuinely be pushed on discounts and rebates, which suppliers sit closest to manufacturer level, and why buying closer to source fundamentally changes what a contractor pays.</p>
+      <p style="margin-top: 12px;">That knowledge is not available in a textbook. It comes from 18 years on the other side of the table — and it is the commercial foundation of everything BAAM does for you.</p>
+    </div>
+
+    <div class="three-col" style="margin-bottom: 40px;">
+      <div class="col" style="text-align: center;">
+        <h4>18 Years</h4>
+        <p>Inside builders merchants</p>
+      </div>
+      <div class="col" style="text-align: center;">
+        <h4>Branch Mgr</h4>
+        <p>Highest level reached</p>
+      </div>
+      <div class="col" style="text-align: center;">
+        <h4>Insider</h4>
+        <p>Knowledge from the other side</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 32px;">
+      <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">Martin's Team of Buyers</p>
+      <h3>A Dedicated Buying Team — Working for You Every Single Day.</h3>
+      <p style="margin-top: 12px;">Behind Martin sits a dedicated team of experienced buyers managing your procurement every day as a structured, continuous function. Supplier negotiations, rebate tracking, invoice auditing, programme alignment and supplier setups run without interruption. Your procurement does not pause because you are on site or because it is a busy period. It runs in the background — professionally, consistently, entirely on your behalf.</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 32px;">
+      <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">How Easy Is It to Work With BAAM?</p>
+      <h3>As Simple as It Gets.</h3>
+      <ul class="bullet-list" style="margin-top: 16px;">
+        <li>No disruption to your existing operations or supplier relationships.</li>
+        <li>No systems to install, no platforms to learn, no administration to take on.</li>
+        <li>One point of contact for everything procurement-related.</li>
+        <li>You carry on running your projects. BAAM handles the buying.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">Closer to Source — Lower Cost</p>
+      <h3>Cutting Out the Middleman. Permanently.</h3>
+      <p style="margin-top: 12px;">Working inside merchants for 18 years, Martin saw that the most commercially intelligent operations always bought as close to manufacturer level as possible. Every layer between you and the source adds margin you do not need to pay. BAAM identifies and introduces manufacturer-direct and near-manufacturer suppliers across your key spend categories — removing cost most contractors never realise they are carrying. Same quality. Materially lower price.</p>
+    </div>
+
+    <div class="supply-chain">
+      <div class="node active">Manufacturer</div>
+      <span class="arrow">→</span>
+      <div class="node active">BAAM Client</div>
+      <span class="arrow">&nbsp;&nbsp;&nbsp;</span>
+      <div class="node removed">Distributor</div>
+      <span class="arrow">&nbsp;</span>
+      <div class="node removed">Merchant</div>
+    </div>
+    <p class="supply-chain-caption">Active = where BAAM positions you. &nbsp; Crossed out = layers removed from your cost.</p>
+
+    <div class="page-footer">
+      <span class="brand">BAAM Materials</span>
+      <span>Managed Procurement &middot; Protected Margin</span>
+      <span>4</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ PAGE 5 — WHAT BAAM DELIVERS ════════════════════════════════════════ -->
+  <section class="page">
+    <p class="section-label">What BAAM Delivers</p>
+    <h1 class="page-title" style="margin-bottom: 8px;">
+      Every Service Delivered by BAAM<br><span class="accent">Improves Your Commercial Position.</span>
+    </h1>
+    <p class="page-subtitle">&nbsp;</p>
+
+    <div style="background: var(--bg-card); border-radius: 8px; padding: 36px 40px;">
+
+      <div class="service-item">
+        <h4>Free Procurement Health Check — No Cost. No Obligation. Always First.</h4>
+        <p>A structured commercial review of your entire buying position. We examine your supplier network, discount tiers, rebate agreements and invoice history. We identify every area where margin is leaving your business and put a specific pound value on what is recoverable. Not a sales pitch. A genuine commercial audit delivered at no cost. Most contractors are surprised by what we find.</p>
+        <p class="checkmark">✓ You know exactly what you are losing before making any decision.</p>
+      </div>
+
+      <div class="service-item">
+        <h4>Supplier Benchmarking &amp; Renegotiation</h4>
+        <p>We benchmark your supplier network across multiple merchants and distributors to ensure you are on the best available pricing and discount structures. We then renegotiate on your behalf — using 18 years of merchant-side knowledge to push for terms most contractors would not know to ask for.</p>
+        <p class="checkmark">✓ Better pricing on every order, every week. Permanently secured.</p>
+      </div>
+
+      <div class="service-item">
+        <h4>Rebate Identification &amp; Management</h4>
+        <p>We identify every rebate opportunity available to your business, negotiate the strongest possible structures, and track performance quarterly to ensure every penny arrives. Rebates only deliver value when someone actively manages them. Most contractors are leaving significant rebate income unclaimed.</p>
+        <p class="checkmark">✓ Rebate income negotiated, tracked and confirmed every quarter.</p>
+      </div>
+
+      <div class="service-item">
+        <h4>Invoice Auditing &amp; Pricing Verification</h4>
+        <p>Every invoice reviewed line by line against agreed pricing. Wrong discounts, duplicate charges, pricing discrepancies — all identified, challenged and recovered. Where errors are found, BAAM secures credit notes on your behalf. This service alone frequently recovers more than the full monthly retainer.</p>
+        <p class="checkmark">✓ Errors found, challenged and money recovered. Usually within weeks.</p>
+      </div>
+
+      <div class="service-item">
+        <h4>Procurement Scheduling &amp; Programme Alignment</h4>
+        <p>Materials procurement is coordinated against your build programme to eliminate delays, emergency purchasing and the inflated pricing that comes with last-minute orders. Materials arrive when your programme demands them — not before, not after, and never at avoidable premium cost.</p>
+        <p class="checkmark">✓ Right materials. Right time. No programme risk. No emergency spend.</p>
+      </div>
+
+      <div class="service-item">
+        <h4>Manufacturer-Direct Supplier Introductions</h4>
+        <p>Using 18 years of supplier-side relationships, BAAM identifies and introduces suppliers who sit as close to manufacturer level as possible across your key spend categories — removing supply chain layers and the costs embedded in them.</p>
+        <p class="checkmark">✓ Lower material cost. Same or better product. A permanent commercial improvement.</p>
+      </div>
+
+      <div class="service-item">
+        <h4>Tender &amp; Project Material Pricing</h4>
+        <p>Before you price a project, BAAM goes to market on your materials and builds a reliable, commercially structured cost schedule. Your tenders stop carrying unnecessary material risk from the outset.</p>
+        <p class="checkmark">✓ Price jobs with confidence. Protect margin before the contract is signed.</p>
+      </div>
+
+      <div class="service-item">
+        <h4>Precon &amp; Programme-Level Procurement</h4>
+        <p>For larger or longer projects, BAAM joins your pre-construction commercial team. We plan materials against your programme, phase ordering to match cash flow, and negotiate call-off agreements that lock in pricing for the full project duration.</p>
+        <p class="checkmark">✓ Commercial certainty on materials. No surprises mid-project.</p>
+      </div>
+
+      <div class="service-item">
+        <h4>Plant &amp; Tool Hire Coordination</h4>
+        <p>Where required, BAAM supports plant and tool hire procurement — comparing suppliers, negotiating hire rates and coordinating schedules to ensure you are not overpaying on equipment or carrying unnecessary idle hire costs on site.</p>
+        <p class="checkmark">✓ Better hire rates. Coordinated scheduling. Less wasted spend.</p>
+      </div>
+
+      <div class="service-item">
+        <h4>New Supplier Account Setup</h4>
+        <p>When a new merchant or supplier relationship is needed, BAAM establishes it correctly from day one — right discount structure, rebate agreement in place, correct terms negotiated before a single order is placed. Never on merchant-set terms.</p>
+        <p class="checkmark">✓ Structured from the start. Never opening an account on the merchant's terms.</p>
+      </div>
+
+    </div>
+
+    <div class="page-footer">
+      <span class="brand">BAAM Materials</span>
+      <span>Managed Procurement &middot; Protected Margin</span>
+      <span>5</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ PAGE 6 — HOW IT WORKS ════════════════════════════════════════ -->
+  <section class="page">
+    <p class="section-label">How It Works</p>
+    <h1 class="page-title" style="margin-bottom: 8px;">Getting Started Is Straightforward.</h1>
+    <p class="page-subtitle">There is no complex onboarding, no disruption to your current operations and no long lead time. BAAM is built to deliver results from the first month.</p>
+
+    <div class="step">
+      <p class="step-label">Step 1</p>
+      <h3>Free Procurement Health Check — We Come to You</h3>
+      <p>We begin with a free, structured review of your current buying position. No preparation required on your part. We examine your supplier accounts, discount structures, rebate agreements and recent invoices. At the end, you receive a clear picture of where margin is leaving your business and a specific pound value attached to what is recoverable. No cost. No commitment. No obligation to proceed.</p>
+    </div>
+
+    <div class="step">
+      <p class="step-label">Step 2</p>
+      <h3>Bespoke Proposal — Built Around Your Business</h3>
+      <p>Based on what we find, we put together a proposal tailored specifically to your business, your spend and your priorities. Every engagement is different — because every contractor's situation is different. There are no standard packages. There is a commercial solution built around you.</p>
+    </div>
+
+    <div class="step">
+      <p class="step-label">Step 3</p>
+      <h3>We Start — Immediately and Without Disruption</h3>
+      <p>Your dedicated BAAM buyer gets to work straight away. Supplier accounts are reviewed and renegotiated. Rebate agreements are established. Invoices are audited. Programme alignment begins. None of this requires anything from your team beyond an initial introduction to your existing suppliers — which takes minutes, not weeks. Most clients see a clear financial return within the first month.</p>
+    </div>
+
+    <div class="step">
+      <p class="step-label">Step 4</p>
+      <h3>Monthly Reporting — Full Transparency, Every Time</h3>
+      <p>Every month you receive a clear, itemised report. Every saving documented. Every rebate tracked. Every invoice error recovered and evidenced. You always know exactly what BAAM has delivered. No ambiguity, no vague claims and no unverified numbers. Just a clear record of what your business has saved.</p>
+    </div>
+
+    <div class="guarantee">
+      <div class="label">Our Guarantee</div>
+      <p>If BAAM does not identify savings that exceed your monthly retainer within the first 90 days, you pay nothing for that period. We put that in writing — because in every engagement we have run, we have never needed to honour it. The savings are always there.</p>
+    </div>
+
+    <div class="page-footer">
+      <span class="brand">BAAM Materials</span>
+      <span>Managed Procurement &middot; Protected Margin</span>
+      <span>6</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ PAGE 7 — REAL NUMBERS ════════════════════════════════════════ -->
+  <section class="page">
+    <p class="section-label">Real Numbers</p>
+    <h1 class="page-title" style="margin-bottom: 8px;">What This Looks Like in Practice.</h1>
+    <p class="page-subtitle">A real engagement. Real numbers. Real timeline. No projections.</p>
+
+    <div class="card" style="margin-bottom: 32px;">
+      <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">Client Profile</p>
+      <h3 style="font-size: 1.3rem;">£1.3M Annual Materials Spend. No Procurement Structure.</h3>
+      <p style="margin-top: 12px;">A contractor spending £1.3 million annually on materials. No rebate agreements. A limited supplier network on standard merchant terms. No invoice checking and no commercial oversight of any kind.</p>
+    </div>
+
+    <div class="three-col" style="margin-bottom: 40px;">
+      <div class="col">
+        <h4>Annual Spend</h4>
+        <p class="big-number">£1.3M</p>
+        <p>No rebates. Buying on whatever the merchant applied.</p>
+      </div>
+      <div class="col">
+        <h4>Recoverable Value</h4>
+        <p class="big-number">£80–120K</p>
+        <p>Rebates, discounts and invoice recoveries combined annually.</p>
+      </div>
+      <div class="col">
+        <h4>Retainer Covered</h4>
+        <p class="big-number">Month 1</p>
+        <p>Full retainer recovered within the first few orders placed.</p>
+      </div>
+    </div>
+
+    <div class="card" style="border-left-color: var(--gold);">
+      <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;">What Happened and When</p>
+      <h3 style="margin-bottom: 24px;">The Engagement Timeline</h3>
+
+      <div class="timeline-item">
+        <p class="time-label">Week 1–2</p>
+        <p>Free Health Check completed. Three specific areas of margin leakage identified. Recoverable value quantified at £80,000 to £120,000 per year. Bespoke proposal agreed. Engagement started.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="time-label">Month 1</p>
+        <p>Supplier accounts renegotiated. Rebate agreements established with two primary merchants. First invoice audit completed — pricing errors identified and credited. Full retainer recovered within the first few orders placed.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="time-label">Months 2–3</p>
+        <p>Manufacturer-direct supplier introduced for a key spend category. 8 percent price reduction achieved on that category immediately. Procurement aligned to build programme. First quarterly rebate confirmed.</p>
+      </div>
+
+      <div class="timeline-item">
+        <p class="time-label">Ongoing</p>
+        <p>Monthly invoice audits running. Rebates tracked and claimed every quarter. Supplier network continuously reviewed and improved. Client saving consistently running at five to seven times the monthly retainer.</p>
+      </div>
+    </div>
+
+    <div class="callout-green">
+      <p>This client did not spend a single penny of their own money. Every pound paid to BAAM came from margin they were already losing without knowing it.</p>
+    </div>
+
+    <div class="card">
+      <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">What This Means for You</p>
+      <h3>Put Your Own Numbers In.</h3>
+      <ul class="bullet-list" style="margin-top: 16px;">
+        <li>£500k annual spend with no structure — conservatively £20,000 to £40,000 recoverable per year.</li>
+        <li>£1m or more annual spend — almost certainly £60,000 or more before supply chain improvements.</li>
+        <li>The question is not whether BAAM will find savings. It is how long you can afford to leave them there.</li>
+      </ul>
+    </div>
+
+    <div class="page-footer">
+      <span class="brand">BAAM Materials</span>
+      <span>Managed Procurement &middot; Protected Margin</span>
+      <span>7</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ PAGE 8 — WHY BAAM WORKS + CTA ════════════════════════════════════════ -->
+  <section class="page">
+    <p class="section-label">Why BAAM Works</p>
+    <h1 class="page-title" style="margin-bottom: 4px;">Why Contractors Choose BAAM.</h1>
+    <p style="font-size: 1.1rem; color: var(--gray-300); margin-bottom: 48px;">And why they never leave.</p>
+
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <h3>More in Your Pocket. No Extra Headcount.</h3>
+      <p>A full-time procurement manager costs £45,000 to £65,000 in salary alone before employer NI, pension and management time. BAAM gives you the same structured commercial oversight and a dedicated buying team — without any of that overhead and without adding a single person to your payroll. Scoped around your business. Your accounts always stay in your name. And if we do not find savings that exceed your retainer within 90 days, you pay nothing. We have never had to honour that.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <h3>18 Years of Insider Knowledge Working for You.</h3>
+      <p>Martin spent 18 years inside builders merchants — reaching Branch Manager level and understanding exactly how they price, where they can genuinely be pushed, which suppliers sit closest to manufacturer level, and what questions most contractors never think to ask. That knowledge is not available anywhere else. It works for you on every negotiation, every invoice, every single month.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <h3>Total Transparency. Every Month. Every Penny.</h3>
+      <p>Every month, BAAM delivers a clear, itemised report — every saving documented, every rebate evidenced, every invoice error confirmed. You always know exactly what has been delivered and exactly what it is worth. No vague assurances. No unverified claims. Just proof. Our clients stay because the monthly report makes leaving feel irrational.</p>
+    </div>
+
+    <div class="guarantee">
+      <div class="label">Guaranteed</div>
+      <p>If we do not identify savings that exceed your monthly retainer within the first 90 days, you pay nothing for that period. We put that in writing. We have run this engagement many times. We have never had to honour it. The savings are always there.</p>
+    </div>
+
+    <div class="cta-box">
+      <h2>START WITH A FREE HEALTH CHECK</h2>
+      <div class="divider"></div>
+      <p class="cta-subtitle">No obligation. No cost. No preparation needed on your part.</p>
+      <p class="cta-description">A structured commercial review of your buying position — and a specific pound value showing exactly what you are currently losing.</p>
+      <div class="divider"></div>
+      <p class="contact-name">Martin Cross — Director</p>
+      <p class="contact-details">07513 448631 &nbsp;&middot;&nbsp; martin.cross@baammaterials.co.uk</p>
+    </div>
+
+    <div class="page-footer">
+      <span class="brand">BAAM Materials</span>
+      <span>Managed Procurement. Protected Margin.</span>
+      <span>8</span>
+    </div>
+  </section>
+
+</body>
+</html>
