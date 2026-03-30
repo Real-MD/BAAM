@@ -555,6 +555,109 @@
       opacity: 0.75;
     }
 
+    /* ── Mobile styles ── */
+    @media (max-width: 768px) {
+      .page {
+        padding: 48px 20px;
+        min-height: auto;
+      }
+
+      .page-title {
+        font-size: 1.8rem !important;
+      }
+
+      .page-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .three-col {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .card {
+        padding: 20px 20px;
+      }
+
+      .card h3 {
+        font-size: 1.05rem;
+      }
+
+      .guarantee {
+        padding: 20px 24px;
+      }
+
+      .callout-gold,
+      .callout-green {
+        padding: 18px 20px;
+      }
+
+      .step {
+        padding: 20px 20px;
+      }
+
+      .why-card {
+        padding: 24px 24px;
+      }
+
+      .why-card .why-num {
+        font-size: 2.5rem;
+      }
+
+      .supply-chain {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .supply-chain .arrow {
+        transform: rotate(90deg);
+      }
+
+      .cta-box {
+        padding: 32px 20px;
+      }
+
+      .cta-box h2 {
+        font-size: 1.4rem;
+      }
+
+      .page-footer {
+        left: 20px;
+        right: 20px;
+        font-size: 0.65rem;
+      }
+
+      .back-nav-inner {
+        padding: 0 20px;
+      }
+
+      .service-item h4 {
+        font-size: 0.8rem;
+      }
+
+      div[style*="padding: 36px 40px"] {
+        padding: 20px 16px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        padding: 36px 16px;
+      }
+
+      .page-title {
+        font-size: 1.5rem !important;
+      }
+
+      .cta-box h2 {
+        font-size: 1.2rem;
+      }
+
+      .three-col .col .big-number {
+        font-size: 1.8rem;
+      }
+    }
+
     /* ── Print styles ── */
     @page {
       size: A4;
