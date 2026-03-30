@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BAAM Materials — Client Welcome Pack</title>
+  <link rel="icon" type="image/x-icon" href="logo.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
 
@@ -17,8 +21,8 @@
       --bg-dark: #0f1419;
       --bg-card: #1a1f26;
       --bg-card-alt: #222930;
-      --gold: #c9a84c;
-      --gold-light: #d4b965;
+      --gold: #D4A017;
+      --gold-light: #F5C842;
       --green: #4caf50;
       --white: #ffffff;
       --gray-100: #f0f0f0;
@@ -522,6 +526,35 @@
       line-height: 1.75;
     }
 
+    /* ── Back nav ── */
+    .back-nav {
+      background: #111;
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .back-nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 60px;
+    }
+
+    .back-link {
+      font-family: var(--font);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .back-link:hover {
+      opacity: 0.75;
+    }
+
     /* ── Print styles ── */
     @page {
       size: A4;
@@ -529,6 +562,8 @@
     }
 
     @media print {
+      .back-nav { display: none; }
+
       body {
         background: var(--bg-dark);
         -webkit-print-color-adjust: exact;
@@ -552,6 +587,12 @@
   </style>
 </head>
 <body>
+
+  <nav class="back-nav">
+    <div class="back-nav-inner">
+      <a href="index.html" class="back-link">&larr; Back to BAAM Materials</a>
+    </div>
+  </nav>
 
   <!-- ════════════════════════════════════════ PAGE 1 — COVER ════════════════════════════════════════ -->
   <section class="page">
